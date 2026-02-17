@@ -1,0 +1,42 @@
+{
+  "climber": {
+    "name": "John Rock Climbing",
+    "age": 25,
+    "member": true,
+    "home_gym": "Wild Walls Spokane"
+  },
+  "session_date": "2026-02-15",
+  "location": {
+    "type": "indoor",
+    "city": "Spokane",
+    "state": "WA"
+  },
+  "routes": [
+    {
+      "name": "Blue Lightning",
+      "grade": "5.10b",
+      "color": "blue",
+      "attempts": 3,
+      "sent": true,
+      "style": "toprope"
+    },
+    {
+      "name": "Crimpy Business",
+      "grade": "5.11a",
+      "color": "red",
+      "attempts": 5,
+      "sent": false,
+      "style": "lead"
+    },
+    {
+      "name": "Slab Master",
+      "grade": "5.9",
+      "color": "green",
+      "attempts": 1,
+      "sent": true,
+      "style": "toprope"
+    }
+  ],
+  "notes": null,
+  "total_time_minutes": 95
+}
