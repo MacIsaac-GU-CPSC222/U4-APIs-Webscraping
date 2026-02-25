@@ -1,19 +1,20 @@
 import json
 
-json_s = '{"name": "John", "age": 25, "test items":["wonky", 123, true, null, false]}'
-json_y = '[{"name":"Bill", "age":30}, {"name":"Sarah", "age":29}]'
-
-obj = json.loads(json_s)
-name = obj["name"]
-age = obj["age"]
-print(type(obj))
-
-print(f"Name: {name}, Age: {age}")
-print(obj["test items"])
-
-obj = json.loads(json_y)
-print(obj[0]["name"])
-
 j_file = open("climbing.json")
 obj = json.load(j_file)
+print(type(obj))
+print(obj["climber"])
+# get the climber's name
+
+
+print(json.dumps(obj, indent=1))
+
 print(obj["routes"])
+print(obj["routes"][0]["sent"])
+
+print(obj["notes"])
+
+print(obj["total_time_minutes"])
+
+# Task! Print out how many total attempts he completed
+
