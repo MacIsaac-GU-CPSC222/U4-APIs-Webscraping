@@ -50,7 +50,7 @@ def get_directions(src_coords, dst_coords):
 
     json_obj = response.json()
 
-    print(json.dumps(json_obj, indent=5))
+    print(json.dumps(json_obj, indent=2))
     
     return json_obj
 
