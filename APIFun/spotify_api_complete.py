@@ -64,14 +64,30 @@ def get_albums(artist_id):
     ).json()
     print(json.dumps(r, indent=5))
     albums = r["items"]
-    album_names = [item["name"] for item in albums]
+    album_names = [{"name": item["name"], "id": item["id"]} for item in albums]
     # return a simple list of (album_name, album_id)
     return album_names
 
 
+def get_album_tracks(album_id):
+    # get token (client credentials)
+    token = get_access_token()
+
+    # get artist albums
+    r = requests.get(
+        f"https://api.spotify.com/v1/albums/{album_id}/tracks",
+        headers={"Authorization": f"Bearer {token}"},  # change if you want more
+        params={}
+    ).json()
+    print(json.dumps(r, indent=5))
+    songs = [item["name"] for item in r["items"]]
+    return songs
 
 # tiny demo usage:
 name = input("Artist name: ").strip()
 id = get_artist_id(name)
 print(id)
-print(get_albums(id))
+albums = get_albums(id)
+print(albums)
+tracks = get_album_tracks(albums[0]["id"])
+print(tracks)

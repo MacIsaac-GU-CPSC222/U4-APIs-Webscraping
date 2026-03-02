@@ -12,3 +12,14 @@ def get_access_token():
     # The field must have the format: 
     # Authorization: Basic *<base64 encoded client_id:client_secret>*
     pass
+
+
+
+# TASK! Fill out this function
+def get_album_tracks(album_id):
+    """
+    Takes an Album ID and returns a list of the song names in that album
+
+    Hint: You will need to look into the spotify albums documentation!
+    """
+    pass
