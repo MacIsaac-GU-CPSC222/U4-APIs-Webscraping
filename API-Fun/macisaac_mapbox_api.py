@@ -42,7 +42,7 @@ def get_address_coords(addr):
 
 def get_directions(src_coords, dst_coords):
     direction_url = "https://api.mapbox.com/directions/v5/"
-    url = direction_url + "mapbox/cycling/"
+    url = direction_url + "mapbox/driving/"
     url += str(src_coords["longitude"]) + "," + str(src_coords["latitude"])
     url += ";"
     url += str(dst_coords["longitude"]) + "," + str(dst_coords["latitude"])
@@ -61,12 +61,16 @@ def main():
     src_addr = "502 E Boone Ave, Spokane,WA"
     dst_addr = "25211 N Mt Spokane Dr, Mead, WA"
 
+    # Geocoding time! Address to Coordinates
     src_coords = get_address_coords(src_addr)
     dst_coords = get_address_coords(dst_addr)
-    # Geocoding time! Address to Coordinates
-    json_directions = get_directions(src_coords, dst_coords)
+
 
     # Now lets get directions from the source to the destination
+    json_directions = get_directions(src_coords, dst_coords)
+    with open("directions_data.json", "w") as file:
+        json.dump(json_directions, file, indent=4)
+ 
 
 
 

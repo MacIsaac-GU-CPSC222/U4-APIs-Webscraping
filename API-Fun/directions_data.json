@@ -1,0 +1,47 @@
+{
+    "code": "Ok",
+    "waypoints": [
+        {
+            "location": [
+                -117.402394,
+                47.667868
+            ],
+            "name": "",
+            "distance": 24.955
+        },
+        {
+            "location": [
+                -117.131314,
+                47.886751
+            ],
+            "name": "",
+            "distance": 16.237
+        }
+    ],
+    "routes": [
+        {
+            "geometry": "ec}aH|cqkUnA~LcYF]}~FeoDtFgBib@yaBnQymAkm@qw@fb@}rAqF_`Atk@_|AlOk\\kmA}b@iT_B{pQuvAklCkKqeC{lA`Gm_Awc@akA}wBlZ}`AsD_\\wuEwaBau@sbAcOweA_e@ua@",
+            "distance": 42905.582,
+            "duration": 2860.361,
+            "weight": 2925.368,
+            "weight_name": "auto",
+            "legs": [
+                {
+                    "steps": [],
+                    "summary": "East Mount Spokane Park Drive, North Mount Spokane Park Drive",
+                    "distance": 42905.582,
+                    "duration": 2860.361,
+                    "weight": 2925.368,
+                    "admins": [
+                        {
+                            "iso_3166_1": "US",
+                            "iso_3166_1_alpha3": "USA"
+                        }
+                    ],
+                    "via_waypoints": []
+                }
+            ]
+        }
+    ],
+    "uuid": "h0shiaQMTqMq988tyNRhW_cIjvqDAorn_F52W-xpQonElnGvZEhtDw=="
+}
