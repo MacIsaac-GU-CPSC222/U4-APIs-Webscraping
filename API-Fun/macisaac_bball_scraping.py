@@ -32,15 +32,17 @@ for tr in trs:
     for td in tds:
         # print(td)
         text = td.get_text()
+        # print(text)
         row.append(text)
     rows.append(row)
+    
 
-# print(len(rows))
-# print(rows[:3])
-# step 4 TASK: create a pandas dataframe for this table data
-# then, parse the thead element to get the names of the columns
-# and make these your dataframe column names
-# then write the dataframe to a file
+print(len(rows))
+print(rows[:3])
+# # step 4 TASK: create a pandas dataframe for this table data
+# # then, parse the thead element to get the names of the columns
+# # and make these your dataframe column names
+# # then write the dataframe to a file
 
 thead = table.find("thead")
 ths = thead.find_all("th")
