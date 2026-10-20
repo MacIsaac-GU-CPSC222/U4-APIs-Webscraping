@@ -36,8 +36,23 @@ for tr in trs:
     # print(rows)
 
 print(rows)
-print(len(rows))
+print(len(rows[:3]))
 
 # TASK: Get the header data from the website. 
 # convert it into a 1D list of column names
 # use rows and header to create a new pandas dataframe
+
+thead = table.find("thead")
+ths = thead.find_all("th")
+print(ths)
+header = []
+for th in ths:
+    header.append(th.get_text())
+
+print(header)
+
+df = pd.DataFrame(rows, columns=header)
+df = df.set_index("School")
+print(df.head())
+
+print(df.loc["Gonzaga"])
